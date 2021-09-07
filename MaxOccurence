@@ -1,0 +1,47 @@
+//Program that count and print maximum number of character.
+
+
+public class Test{
+	
+	public static void main(String[] args){
+		
+		Test t = new Test();
+		t.maxOccurence("Javavv");
+		
+		
+	}
+	
+	public void maxOccurence(String str){
+		
+		int f_count = 0, count = 0;
+		char  c = ' ';
+		
+		for(int i = 0; i < str.length(); i++){
+			
+			count = 0;
+			
+			for(int j = i + 1; j < str.length(); j++){
+				
+				if(str.charAt(i) == str.charAt(j)){
+					
+					count++;
+					c = str.charAt(i);
+				}
+			}
+			
+			if(f_count < count){
+				f_count = count;
+			}
+			
+		}
+		
+		System.out.println(f_count + 1 + " " + c);
+		
+		
+				
+	}
+}
+
+
+ 
+
